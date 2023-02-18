@@ -15,6 +15,7 @@ public class Practice {
                 System.out.println(" ");
                 int inputSelection = Integer.parseInt(scanner.nextLine());
                 if (inputSelection == 5) {
+                    System.out.println("Thanks...");
                     break;
                 }
                 if (inputSelection == 1) {
