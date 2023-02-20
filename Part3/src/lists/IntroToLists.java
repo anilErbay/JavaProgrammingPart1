@@ -36,5 +36,34 @@ public class IntroToLists {
 
         list.remove("Third");
         System.out.println(list);
+
+        ArrayList<Integer> numberList = new ArrayList<>();
+        numberList.add(15);
+        numberList.add(21);
+        numberList.add(9);
+        numberList.add(47);
+        System.out.println(numberList);
+        numberList.remove(Integer.valueOf(9));
+        System.out.println(numberList);
+
+        System.out.println("");
+        // contains method
+        ArrayList<String> randomList = new ArrayList<>();
+        randomList.add("first");
+        randomList.add("second");
+        randomList.add("third");
+
+        System.out.println("Is the 'first' found? : " + randomList.contains("first"));
+
+        boolean isFound = randomList.contains("third");
+        if (isFound) {
+            System.out.println("second is found");
+        }
+        // or
+        if (randomList.contains("Second")) {
+            System.out.println("Second can still be found");
+        }
+
     }
+
 }
