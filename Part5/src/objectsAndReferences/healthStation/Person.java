@@ -1,7 +1,6 @@
 package objectsAndReferences.healthStation;
 
 public class Person {
-
     private String name;
     private int age;
     private int height;
@@ -19,27 +18,30 @@ public class Person {
     }
 
     public void growOlder() {
-        this.age++;
+        this.age += 1;
     }
 
     public boolean isOfLegalAge() {
         if (this.age > 17) {
             return true;
         }
-
         return false;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public void setHeight(int height) {
         this.height = height;
     }
 
-    public int getHeight() {
-        return this.height;
-    }
-
     public int getWeight() {
-        return this.weight;
+        return weight;
     }
 
     public void setWeight(int weight) {
@@ -48,16 +50,12 @@ public class Person {
 
     public double bmi() {
         double heightInMeters = this.height / 100.0;
-
-        return this.weight / (heightInMeters * heightInMeters);
-    }
-
-    public String getName() {
-        return this.name;
+        return this.weight / Math.pow(heightInMeters, 2);
     }
 
     @Override
     public String toString() {
-        return "My name is " + this.name + " and I am " + this.age + " years old. My BMI is " + this.bmi();
+        return "My name is " + this.name + " and I am " + this.age + " years old. My BMI is " +
+                this.bmi();
     }
 }

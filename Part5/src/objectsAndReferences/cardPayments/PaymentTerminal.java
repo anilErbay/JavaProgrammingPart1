@@ -8,7 +8,7 @@ public class PaymentTerminal {
     private static final double HEARTILY_PRICE = 4.30;
 
     public PaymentTerminal() {
-        this.money = 1000;
+        this.money = 1000.0;
     }
 
     public double eatAffordably(double payment) {
@@ -47,13 +47,12 @@ public class PaymentTerminal {
         return false;
     }
 
-    public void addMoney(PaymentCard card,double sum) {
+    public void addMoneyToCard(PaymentCard card, double sum) {
         if (sum > 0) {
             card.addMoney(sum);
             money += sum;
         }
     }
-
 
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
